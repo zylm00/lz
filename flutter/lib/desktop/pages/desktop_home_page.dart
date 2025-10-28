@@ -402,7 +402,7 @@ class _DesktopHomePageState extends State<DesktopHomePage>
                 Align(
                   alignment: Alignment.centerLeft,
                   child: Text(
-                    "复制ID发给客服",
+                    translate"复制ID发给客服",
                     style: Theme.of(context).textTheme.titleLarge,
                   ),
                 ),
