@@ -402,7 +402,7 @@ class _DesktopHomePageState extends State<DesktopHomePage>
                 Align(
                   alignment: Alignment.centerLeft,
                   child: Text(
-                    translate"复制ID发给客服",
+                    translate("Your Desktop"),
                     style: Theme.of(context).textTheme.titleLarge,
                   ),
                 ),
@@ -413,7 +413,7 @@ class _DesktopHomePageState extends State<DesktopHomePage>
           ),
           if (!isOutgoingOnly)
             Text(
-              translate("desk_tip"),
+              translate("复制下方id发给客服"),
               overflow: TextOverflow.clip,
               style: Theme.of(context).textTheme.bodySmall,
             ),
@@ -427,10 +427,10 @@ class _DesktopHomePageState extends State<DesktopHomePage>
       ),
     );
   }
+
   Widget buildHelpCards(String updateUrl) {
     return Container();
   }
-
   Widget buildInstallCard(String title, String content, String btnText,
       GestureTapCallback onPressed,
       {double marginTop = 20.0,
@@ -438,7 +438,9 @@ class _DesktopHomePageState extends State<DesktopHomePage>
       String? link,
       bool? closeButton,
       String? closeOption}) {
-      return const SizedBox.shrink();
+    if (bind.mainGetBuildinOption(key: kOptionHideHelpCards) == 'Y' &&
+        content != 'install_daemon_tip') {
+      return const SizedBox();
     }
     void closeCard() async {
       if (closeOption != null) {
