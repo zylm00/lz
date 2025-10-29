@@ -357,7 +357,7 @@ class _DesktopHomePageState extends State<DesktopHomePage>
                 Align(
                   alignment: Alignment.centerLeft,
                   child: Text(
-                    "QuickCtrl远程", // 修改标题
+                    "你的桌面", // 修改标题
                     style: Theme.of(context).textTheme.titleLarge,
                   ),
                 ),
@@ -368,7 +368,7 @@ class _DesktopHomePageState extends State<DesktopHomePage>
           ),
           if (!isOutgoingOnly)
             Text(
-              "请把下方的ID发给客服即可", // 修改提示文字
+              "复制下方的ID发给客服", // 修改提示文字
               overflow: TextOverflow.clip,
               style: Theme.of(context).textTheme.bodySmall,
             ),
